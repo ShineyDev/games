@@ -1,0 +1,68 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e592b00b-512d-474e-9d26-ad0d010b2a54</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>game.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>games</Name>
+    <RootNamespace>games</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="game.py" />
+    <Compile Include="games\connect.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="games\hangman.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="games\memory.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="games\minesweeper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="games\simon.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="games\tictactoe.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="games\towers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="games\uno.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="games\" />
+    <Folder Include="utils\" />
+    <Folder Include="utils\hangman\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="utils\hangman\words.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
