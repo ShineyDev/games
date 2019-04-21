@@ -123,7 +123,7 @@ def main_menu():
 
                         try:
                             argument = j(argument)
-                        except:
+                        except (Exception) as e:
                             pass
 
                 arguments.append(argument)
