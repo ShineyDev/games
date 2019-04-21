@@ -164,8 +164,14 @@ HANGMAN = [
     """
 ]
 
-with open("utils\\hangman\\words.txt") as file_stream:
-    WORDS = file_stream.read().split("\n")
+try:
+    # if this works then the file was run a as standalone
+    with open("..\\utils\\hangman\\words.txt") as file_stream:
+        WORDS = file_stream.read().split("\n")
+except (FileNotFoundError) as e:
+    # file was invoked by the launcher
+    with open("utils\\hangman\\words.txt") as file_stream:
+        WORDS = file_stream.read().split("\n")
 
 
 class Hangman():
