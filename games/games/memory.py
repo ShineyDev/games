@@ -28,6 +28,7 @@ import random
 import re
 import string
 import time
+import typing
 
 import pyfiglet
 
@@ -42,7 +43,7 @@ CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"Â
 
 
 class Memory():
-    def __init__(self, difficulty : {"easy", "intermediate", "hard"}):
+    def __init__(self, difficulty: typing.Union["easy", "intermediate", "hard"]):
         """
         initializes a `Memory` object
         """
@@ -135,7 +136,7 @@ class Memory():
         print()
         print("congrats")
 
-    def parse_coordinates(self, coordinates : str):
+    def parse_coordinates(self, coordinates: str):
         """
         generates a (row : int, column : int) tuple from coordinates
 
@@ -188,7 +189,7 @@ class Memory():
             self.game()
             choice = input("\nwould you like to play again?\n> ").strip()
 
-    def valid_coordinates(self, coordinates : str):
+    def valid_coordinates(self, coordinates: str):
         """
         determines whether `coordinates` are valid
 
