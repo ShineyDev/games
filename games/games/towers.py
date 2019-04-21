@@ -37,7 +37,7 @@ HEIGHTS = {
 
 
 class Towers():
-    def __init__(self, difficulty : {"easy", "intermediate", "hard"}):
+    def __init__(self, difficulty: str):
         """
         initializes a `Towers` object
         """

@@ -28,7 +28,6 @@ import random
 import re
 import string
 import time
-import typing
 
 import pyfiglet
 
@@ -43,7 +42,7 @@ CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"Â
 
 
 class Memory():
-    def __init__(self, difficulty: typing.Union["easy", "intermediate", "hard"]):
+    def __init__(self, difficulty: str):
         """
         initializes a `Memory` object
         """

@@ -64,7 +64,7 @@ COLOR_FORMATS = {
 
 
 class Card():
-    def __init__(self, color : str, name : str):
+    def __init__(self, color: str, name: str):
         """
         initializes a `Card` object
         """
@@ -177,7 +177,7 @@ class Deck():
         random.shuffle(self.deck)
 
 class Hand():
-    def __init__(self, deck : Deck):
+    def __init__(self, deck: Deck):
         """
         initializes a `Hand` object
         """
@@ -210,7 +210,7 @@ class Hand():
         self.hand = list()
 
 class Player():
-    def __init__(self, name : str, deck : Deck):
+    def __init__(self, name: str, deck: Deck):
         """
         initializes a `Player` object
         """
@@ -233,7 +233,7 @@ class Player():
         return False
 
 class Uno():
-    def __init__(self, player_count : int):
+    def __init__(self, player_count: int):
         """
         initializes an `Uno` object
         """

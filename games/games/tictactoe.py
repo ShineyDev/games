@@ -54,7 +54,7 @@ class Board():
 
         return board.strip("\n")
 
-    def is_free(self, position : int) -> bool:
+    def is_free(self, position: int) -> bool:
         """
         checks whether a `position` on `self.board` is free
 
@@ -107,7 +107,7 @@ class Board():
         self.board[position - 1] = symbol
 
 class Player():
-    def __init__(self, name : str, symbol : str, board : Board):
+    def __init__(self, name: str, symbol: str, board: Board):
         """
         initializes a `Player` class derived from `object` with `name`, `symbol` and `board`
         """

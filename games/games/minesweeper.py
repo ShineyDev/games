@@ -58,7 +58,7 @@ COLORS = [
 
 
 class Grid():
-    def __init__(self, size : int, mine_count : int):
+    def __init__(self, size: int, mine_count: int):
         """
         initializes a `Grid` object
         """
@@ -68,7 +68,7 @@ class Grid():
         
         self.known = [[" " for (i) in range(self.size)] for (j) in range(self.size)]
 
-    def get_neighbors(self, cell : tuple) -> set:
+    def get_neighbors(self, cell: tuple) -> set:
         """
         gets a set of surrounding cells from `cell`
 
@@ -103,7 +103,7 @@ class Grid():
 
         return (random.randint(0, self.size - 1), random.randint(0, self.size - 1))
 
-    def generate_mines(self, start_cell : tuple):
+    def generate_mines(self, start_cell: tuple):
         """
         generates a set of mines excluding `start_cell`
 
@@ -141,7 +141,7 @@ class Grid():
                     else:
                         self.hidden[row_index][column_index] = "{0}{1}{2}".format(COLORS[number - 1], number, colorama.Fore.RESET)
 
-    def show(self, grid : list) -> str:
+    def show(self, grid: list) -> str:
         """
         generates a string containing a readable form of the minesweeper grid
 
@@ -170,7 +170,7 @@ class Grid():
         
         return grid_string
 
-    def show_cell(self, cell : tuple):
+    def show_cell(self, cell: tuple):
         """
         sets `cell` in `self.known` as `self.hidden` and iterates through neighbors if `self.known` == "0"
 
@@ -190,7 +190,7 @@ class Grid():
                 if (self.known[row_index][column_index] != "F"):
                     self.show_cell((row_index, column_index))
 
-    def start(self, start_cell : tuple):
+    def start(self, start_cell: tuple):
         """
         generates the minesweeper grid
 
@@ -206,7 +206,7 @@ class Grid():
         self.show_cell(start_cell)
 
 class Minesweeper():
-    def __init__(self, difficulty : str):
+    def __init__(self, difficulty: str):
         """
         initializes a `Minesweeper` object
         """
@@ -340,7 +340,7 @@ class Minesweeper():
         print()
         print("you win")
 
-    def parse_coordinates(self, coordinates : str) -> tuple:
+    def parse_coordinates(self, coordinates: str) -> tuple:
         """
         generates a (row : int, column : int, flag : bool) tuple from coordinates
 
@@ -375,7 +375,7 @@ class Minesweeper():
             self.game()
             choice = input("\nwould you like to play again?\n> ").strip()
 
-    def valid_coordinates(self, coordinates : str) -> bool:
+    def valid_coordinates(self, coordinates: str) -> bool:
         """
         determines whether `coordinates` are valid
 
