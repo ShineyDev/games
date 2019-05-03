@@ -26,6 +26,9 @@
     <Compile Include="games\connect.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="games\eightpuzzle.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="games\hangman.py">
       <SubType>Code</SubType>
     </Compile>
